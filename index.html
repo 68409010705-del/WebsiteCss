@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Command Guide - 10 Examples</title>
+    <style>
+        /* CSS ส่วนกลางสำหรับจัดหน้าเว็บ */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px;
+            background: #333;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h3 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #444; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; color: #d63384; }
+        .demo-box { margin-top: 15px; padding: 15px; border: 1px dashed #ccc; }
+
+        /* --------------------------------------------------
+           CSS ตัวอย่าง 10 คำสั่ง
+        -------------------------------------------------- */
+
+        /* 1. Color */
+        .ex-color { color: #e74c3c; font-weight: bold; }
+
+        /* 2. Background */
+        .ex-bg { background-color: #3498db; color: white; }
+
+        /* 3. Font Size */
+        .ex-font { font-size: 24px; }
+
+        /* 4. Border */
+        .ex-border { border: 3px solid #2ecc71; }
+
+        /* 5. Border Radius */
+        .ex-radius { background: #f1c40f; border-radius: 20px; padding: 10px; text-align: center; }
+
+        /* 6. Padding & Margin */
+        .ex-spacing { background: #9b59b6; color: white; padding: 30px; margin: 10px; }
+
+        /* 7. Width & Height */
+        .ex-size { width: 100px; height: 100px; background: #34495e; color: white; display: flex; align-items: center; justify-content: center; }
+
+        /* 8. Text Align */
+        .ex-align { text-align: right; background: #ecf0f1; }
+
+        /* 9. Box Shadow */
+        .ex-shadow { box-shadow: 10px 10px 20px rgba(0,0,0,0.3); background: white; }
+
+        /* 10. Opacity */
+        .ex-opacity { opacity: 0.4; background: black; color: white; padding: 10px; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CSS Reference Guide</h1>
+    <p>รวมตัวอย่าง 10 คำสั่งพื้นฐาน พร้อมการแสดงผล</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>1. Color</h3>
+        <p>ใช้เปลี่ยนสีตัวอักษร: <code>color</code></p>
+        <div class="demo-box">
+            <span class="ex-color">ข้อความนี้ใช้สี Hex #e74c3c</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>2. Background Color</h3>
+        <p>เปลี่ยนสีพื้นหลัง: <code>background-color</code></p>
+        <div class="demo-box ex-bg">พื้นหลังสีน้ำเงิน</div>
+    </div>
+
+    <div class="card">
+        <h3>3. Font Size</h3>
+        <p>ปรับขนาดตัวอักษร: <code>font-size</code></p>
+        <div class="demo-box">
+            <span class="ex-font">ขนาด 24px</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>4. Border</h3>
+        <p>สร้างเส้นขอบ: <code>border</code></p>
+        <div class="demo-box ex-border">กล่องมีเส้นขอบสีเขียวหนา 3px</div>
+    </div>
+
+    <div class="card">
+        <h3>5. Border Radius</h3>
+        <p>ทำมุมโค้งมน: <code>border-radius</code></p>
+        <div class="demo-box ex-radius">มุมโค้งมน 20px</div>
+    </div>
+
+    <div class="card">
+        <h3>6. Padding & Margin</h3>
+        <p>ระยะห่าง: <code>padding</code> (ใน) <code>margin</code> (นอก)</p>
+        <div style="background: #eee;">
+            <div class="ex-spacing">กล่องที่มี Padding ภายใน</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>7. Width & Height</h3>
+        <p>กำหนดขนาด: <code>width</code> & <code>height</code></p>
+        <div class="demo-box">
+            <div class="ex-size">100x100</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>8. Text Align</h3>
+        <p>จัดวางข้อความ: <code>text-align</code></p>
+        <div class="demo-box ex-align">ชิดขวา (Right)</div>
+    </div>
+
+    <div class="card">
+        <h3>9. Box Shadow</h3>
+        <p>เพิ่มเงาให้วัตถุ: <code>box-shadow</code></p>
+        <div class="demo-box ex-shadow">กล่องมีเงาฟุ้ง</div>
+    </div>
+
+    <div class="card">
+        <h3>10. Opacity</h3>
+        <p>ค่าความโปร่งใส: <code>opacity</code></p>
+        <div class="demo-box ex-opacity">โปร่งใสระดับ 0.4</div>
+    </div>
+
+</div>
+
+</body>
+</html>
